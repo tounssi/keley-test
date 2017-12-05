@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+/* Colonnes */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+
+/* Colonne gauche */
+.left-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+
+/* Description du produit */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+/* Prix */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+
+/* Slider */
+a { 
+  background: grey;
+  border-radius: 20px; 
+  color: white;
+  display: block;
+  float: left;
+  font-family: sans-serif;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+}
+a:active {
+  background: #c0392b;
+}
+#slider {
+  background: #ecf0f1;
+  height: 500px;
+  float: left;
+  position: relative;
+  width: 97%;
+  margin-top: 60px;
+
+}
+
+.box {
+  color: rgba(255,255,255,.6);
+  font-family: sans-serif;
+  font-size: 48px;
+  height: 100%;
+  line-height: 300px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+#box1 {
+  background-image:url(http://cdn.shopify.com/s/files/1/2103/9893/products/Samsung_Galaxy_S8_Plus_Black_Front_1_800x.jpg?v=1502391191);
+  
+}
+
+#box2 {
+  background-image:url(https://www.pichau.com.br/media/catalog/product/g/9/g955fd4_1.jpg);
+}
+
+#box3 {
+  background-image:url(http://www.proandroid.com/wp-content/uploads/2017/04/s8-bixby.jpg);
+}
+
+:target {
+  z-index: 10;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+  
